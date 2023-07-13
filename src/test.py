@@ -1,13 +1,17 @@
-import math
+# gene_expr = [3.14, 11.82, 7.44, 1.92]
+# codon = ["ATG", "GGC", "TGA", "CCT"]
 
-help(math)
+# new_list = gene_expr + codon
+# print(new_list)
 
-# def run_pipeline_1():
-#     print("Analysis1")
+l = [3, 1, 1, 2, 0, 0, 2, 3, 3]
+l_unique = set(l)
+print(l_unique)
+for elem in l_unique:
+    print(elem)
 
-
-# def run_pipeline_2(a):
-#     print(a)
-
-
-# run_pipeline_2("Analysis2")
+# new_list = list()
+# for elem in l:
+#     if elem not in new_list:
+#         new_list.append(elem)
+# print(new_list)
