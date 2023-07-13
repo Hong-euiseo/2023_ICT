@@ -1,17 +1,41 @@
-# gene_expr = [3.14, 11.82, 7.44, 1.92]
-# codon = ["ATG", "GGC", "TGA", "CCT"]
+import json
 
-# new_list = gene_expr + codon
-# print(new_list)
+# filepath = "C:\\Users\\user\\Desktop\\2023_ICT교육\\2023_ICT\\test.csv"
 
-l = [3, 1, 1, 2, 0, 0, 2, 3, 3]
-l_unique = set(l)
-print(l_unique)
-for elem in l_unique:
-    print(elem)
+# data = list()
+# with open(filepath) as handle:
+#     header = handle.readline().strip().split(",")
+#     print(header)
+#     for line in handle:
+#         row = line.strip().split(",")
+#         data.append(dict(zip(header, row)))
 
-# new_list = list()
-# for elem in l:
-#     if elem not in new_list:
-#         new_list.append(elem)
-# print(new_list)
+# print(json.dumps(data, indent=2))
+
+
+# min_val = float(data[0]["VALUE"])
+# min_gene = data[0]["GENE"]
+# max_val = float(data[0]["VALUE"])
+# max_gene = data[0]["GENE"]
+# for elem in data:
+#     if min_val > float(elem["VALUE"]):
+#         min_val = float(elem["VALUE"])
+#         min_gene = elem["GENE"]
+#     if max_val < float(elem["VALUE"]):
+#         max_val = float(elem["VALUE"])
+#         max_gene = elem["GENE"]
+
+# print(min_gene, min_val)
+# print(max_gene, max_val)
+filepath = "C:\\Users\\user\\Desktop\\2023_ICT교육\\2023_ICT\\test.csv"
+data = list()
+with open(filepath) as handle:
+    header = handle.readline().strip().split(",")
+    for line in handle:
+        row = line.strip().split(",")
+        data.append(dict(zip(header, row)))
+print(data)
+
+filepath = "C:\\Users\\user\\Desktop\\2023_ICT교육\\2023_ICT\\test3.json"
+with open(filepath, "w") as handle:
+    json.dump(data, handle, indent=2)
